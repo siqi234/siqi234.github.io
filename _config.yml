@@ -1,0 +1,10 @@
+# Site settings
+title: Siqi's Personal Page
+author:
+  name: Siqi Lu
+  email: siqi.lu@vanderbilt.edu
+description: "Great site about Jekyll on GH-Pages."
+
+# Build settings
+remote_theme: jekyll/minima
+

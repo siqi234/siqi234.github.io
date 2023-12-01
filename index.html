@@ -54,7 +54,7 @@
             }
 
             .fade-out {
-                animation: fadeOut 2s ease-in-out forwards;
+                animation: fadeOut 1s ease-in-out forwards;
             }
 
             .fade-in {
@@ -62,7 +62,7 @@
             }
         </style>
     </head>
-    <body onload="changeTitles()">
+    <body onload="changePage()">
         <div class="centered-content">
             <h1 id="welcomeTitle" style="color: aliceblue;">Welcome to Siqi's personal page!</h1>
             <p id="Hello" style="color: aliceblue;">Hello, this is Siqi Lu.</p>
@@ -71,27 +71,38 @@
         <h1 id="myName">Siqi Lu</h1>
 
         <script>
-            function changeTitles() {
+            function changePage() {
                 var welcomeTitle = document.getElementById('welcomeTitle');
                 var myName = document.getElementById('myName');
                 var Hello = document.getElementById('Hello');
                 var test = document.getElementById('test');
-
-                // Start fade out
-                welcomeTitle.classList.add('fade-out');
-                Hello.classList.add('fade-out');
-                test.classList.add('fade-out');
+                
+                // fade in first
+                welcomeTitle.classList.add('fade-in');
+                Hello.classList.add('fade-in');
+                test.classList.add('fade-in');
 
                 // Wait for fade out to complete
                 setTimeout(function() {
-                    welcomeTitle.style.display = 'none';
-                    Hello.style.display = 'none';
-                    test.style.display = 'none';
-                    myName.style.display = 'block';
+                    // Start fade out
+                    welcomeTitle.classList.remove('fade-in');
+                    Hello.classList.remove('fade-in');
+                    test.classList.remove('fade-in');
 
-                    // Start fade in
-                    myName.classList.add('fade-in');
-                }, 2000); // Match this with the CSS animation duration
+                    welcomeTitle.classList.add('fade-out');
+                    Hello.classList.add('fade-out');
+                    test.classList.add('fade-out');
+
+                    setTimeout(function() {
+                        welcomeTitle.style.display = 'none';
+                        Hello.style.display = 'none';
+                        test.style.display = 'none';
+
+                        // Start fade in
+                        myName.style.display = 'block';
+                        myName.classList.add('fade-in');
+                    }, 1000);
+                }, 3000); 
             }
         </script>
     </body>

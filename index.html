@@ -6,9 +6,9 @@
             body, html {
                 height: 100%;
                 margin: 0;
-                display: flex;
+                /* display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: center; */
                 text-align: center;
             }
 
@@ -26,10 +26,26 @@
                 background-position: center center;
             }
 
-            h1 {
-                color: aliceblue;
-                font-size: 3em; /* Adjust the size as needed */
-                animation: fadeIn 2s ease-in-out;
+            .centered-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            #myName {
+                position: absolute; /* Use absolute positioning */
+                top: 70px;            /* Align to the top */
+                left: 70px;           /* Align to the left */
+                color: aliceblue;  /* Your existing color style */
+                display: none;     /* Starts off hidden */
+            }
+
+
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
             }
 
             @keyframes fadeIn {
@@ -37,13 +53,46 @@
                 to { opacity: 1; }
             }
 
+            .fade-out {
+                animation: fadeOut 2s ease-in-out forwards;
+            }
+
+            .fade-in {
+                animation: fadeIn 2s ease-in-out forwards;
+            }
         </style>
     </head>
-    <body>
-        <div>
-            <h1>Welcome to Siqi's personal page!</h1>
-            <p>Hello, this is Siqi Lu.</p>
-            <p>Test</p>
+    <body onload="changeTitles()">
+        <div class="centered-content">
+            <h1 id="welcomeTitle" style="color: aliceblue;">Welcome to Siqi's personal page!</h1>
+            <p id="Hello" style="color: aliceblue;">Hello, this is Siqi Lu.</p>
+            <p id="test" style="color: aliceblue;">Test</p>
         </div>
+        <h1 id="myName">Siqi Lu</h1>
+
+        <script>
+            function changeTitles() {
+                var welcomeTitle = document.getElementById('welcomeTitle');
+                var myName = document.getElementById('myName');
+                var Hello = document.getElementById('Hello');
+                var test = document.getElementById('test');
+
+                // Start fade out
+                welcomeTitle.classList.add('fade-out');
+                Hello.classList.add('fade-out');
+                test.classList.add('fade-out');
+
+                // Wait for fade out to complete
+                setTimeout(function() {
+                    welcomeTitle.style.display = 'none';
+                    Hello.style.display = 'none';
+                    test.style.display = 'none';
+                    myName.style.display = 'block';
+
+                    // Start fade in
+                    myName.classList.add('fade-in');
+                }, 2000); // Match this with the CSS animation duration
+            }
+        </script>
     </body>
 </html>

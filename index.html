@@ -3,6 +3,15 @@
     <head>
         <title>Siqi's Personal Page</title>
         <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
             body::before {
                 content: "";
                 position: fixed;
@@ -19,12 +28,22 @@
 
             h1 {
                 color: aliceblue;
+                font-size: 3em; /* Adjust the size as needed */
+                animation: fadeIn 2s ease-in-out;
             }
+
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
         </style>
     </head>
     <body>
-        <h1>Welcome to Siqi's personal page!</h1>
-        <p>Hello, this is Siqi Lu.</p>
-        <p>Test</p>
+        <div>
+            <h1>Welcome to Siqi's personal page!</h1>
+            <p>Hello, this is Siqi Lu.</p>
+            <p>Test</p>
+        </div>
     </body>
 </html>

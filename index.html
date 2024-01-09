@@ -70,7 +70,7 @@
             <p id="test" style="color: aliceblue;">Test</p>
         </div>
         <h1 id="myName">Siqi Lu</h1>
-        <img src="img/pfp1.jpg" alt="Siqi's Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+        <img id = "pfp" src="img/pfp1.jpg" alt="Siqi's Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
 
         <script>
             function changePage() {
@@ -102,7 +102,10 @@
 
                         // Start fade in
                         myName.style.display = 'block';
+                        pfp.style.display = 'block';
                         myName.classList.add('fade-in');
+                        pfp.classList.add('fade-in')
+
                     }, 1000);
                 }, 3000); 
             }

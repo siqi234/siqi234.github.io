@@ -6,9 +6,6 @@
             body, html {
                 height: 100%;
                 margin: 0;
-                /* display: flex;
-                justify-content: center;
-                align-items: center; */
                 text-align: center;
             }
 
@@ -20,8 +17,6 @@
                 bottom: 0;
                 left: 0;
                 z-index: -1;
-
-                /* background-image: url('https://img.freepik.com/free-photo/black-abstract-background-wallpaper-image_53876-110775.jpg?w=2000&t=st=1701405302~exp=1701405902~hmac=3d141c6df971932821b8dab51917b4c668c5da46c916fa6e56b5966d6bdc5754'); */
                 background-image: url('/img/bg1.jpg');
                 background-size: cover;
                 background-position: center center;
@@ -35,14 +30,24 @@
                 height: 100%;
             }
 
-            #myName {
-                position: absolute; /* Use absolute positioning */
-                top: 70px;            /* Align to the top */
-                left: 70px;           /* Align to the left */
-                color: aliceblue;  /* Your existing color style */
-                display: none;     /* Starts off hidden */
+            .intro {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: aliceblue;
+                display: none;
             }
 
+            .intro img {
+                margin-left: 20px;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+
+            #myName {
+                font-size: 2em;
+            }
 
             @keyframes fadeOut {
                 from { opacity: 1; }
@@ -69,21 +74,23 @@
             <p id="Hello" style="color: aliceblue;">Hello, this is Siqi Lu.</p>
             <p id="test" style="color: aliceblue;">Test</p>
         </div>
-        <h1 id="myName">Siqi Lu</h1>
-        <img id="pfp" src="/img/pfp1.jpg" alt="Siqi's Profile Picture" width="480" height="350" >
+        <div class="intro" id="intro">
+            <h1 id="myName">Siqi Lu</h1>
+            <img id="pfp" src="/img/pfp1.jpg" alt="Siqi's Profile Picture">
+        </div>
 
         <script>
             function changePage() {
                 var welcomeTitle = document.getElementById('welcomeTitle');
                 var myName = document.getElementById('myName');
-                var pfp = document.getElementById('pfp')
+                var pfp = document.getElementById('pfp');
                 var Hello = document.getElementById('Hello');
                 var test = document.getElementById('test');
-                
+                var intro = document.getElementById('intro');
+
                 // fade in first
                 welcomeTitle.classList.add('fade-in');
                 Hello.classList.add('fade-in');
-                    // test message
                 test.classList.add('fade-in');
 
                 // Wait for fade out to complete
@@ -103,13 +110,10 @@
                         test.style.display = 'none';
 
                         // Start fade in
-                        myName.style.display = 'block';
-                        pfp.style.display = 'block';
-                        myName.classList.add('fade-in');
-                        pfp.classList.add('fade-in');
-
+                        intro.style.display = 'flex';
+                        intro.classList.add('fade-in');
                     }, 1000);
-                }, 3000); 
+                }, 3000);
             }
         </script>
     </body>

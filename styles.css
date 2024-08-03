@@ -109,5 +109,6 @@ a.contact-link:hover {
 }
 
 .gallery2 img {
-    grid-column: span 2; 
+    grid-column: span 1.5; 
+    border-radius: 10px;
 }

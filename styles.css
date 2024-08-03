@@ -74,7 +74,7 @@ a.contact-link:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
-.about-images, .gallery1, ,.gallery2 {
+.about-images, .gallery1, .gallery2 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;

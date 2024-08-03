@@ -74,22 +74,40 @@ a.contact-link:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
-.about-images, .gallery1, .gallery2 {
+/* .about-images, .gallery1, .gallery2 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
 .about-images img, .gallery1 img {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .gallery2 img {
-    width: 600px; /* Adjust the width as needed */
+    width: 600px; 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}*/
+
+.about-images, .gallery1, .gallery2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.about-images img, .gallery1 img, .gallery2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery2 img {
+    grid-column: span 2; 
 }

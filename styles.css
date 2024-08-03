@@ -106,9 +106,10 @@ a.contact-link:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Adds a gap above each image */
+    margin-bottom: 10px; /* Adds a gap below each image */
 }
 
 .gallery2 img {
     grid-column: span 1.5; 
-    border-radius: 10px;
 }

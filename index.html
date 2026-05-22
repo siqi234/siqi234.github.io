@@ -1,119 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siqi Lu - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siqi Lu - Personal Portfolio</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <img src="img/pfp1.jpg" alt="Your Name" class="profile-picture">
-            <h1>Siqi Lu</h1>
-            <p>Welcome to my personal website!</p>
+
+  <main>
+
+    <!--  SIDEBAR  -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/picture3.jpg" alt="Siqi Lu" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Siqi Lu">Siqi Lu</h1>
+          <p class="title">Ph.D. Student in Computer Science</p>
         </div>
-    </header>
 
-    <main>
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>
-                    Hi, I’m Siqi Lu! I'm currently a Master's student in Electrical and Computer Engineering at Vanderbilt University. 
-                    I have a Bachelor's degree in Electrical Engineering from the University of Illinois Urbana-Champaign. 
-                    My work spans from developing smart consumer products to cutting-edge research in biomedical imaging, remote sensing, 
-                    and machine learning. I'm passionate about using technology to solve real-world problems and love working in collaborative environments.
-                    
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
 
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:slu09@wm.edu" class="contact-link">slu09@wm.edu</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+13152676967" class="contact-link">+1 (315) 267-6967</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Williamsburg, Virginia, USA</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/siqi-lu-097522293/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/siqi234" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?hl=en&user=LXjWy8kAAAAJ" class="social-link">
+              <ion-icon name="school-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--  MAIN CONTENT  -->
+
+    <div class="main-content">
+
+      <!--  NAVBAR  -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+      </nav>
+
+
+      <!--  ABOUT  -->
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hi, I'm Siqi Lu! I'm a Ph.D. student in Computer Science at The College of William & Mary, working in
+            the Robust and Adaptive Intelligence Laboratory (RAIL) under <a href="https://www.ayanmukhopadhyay.com/" target="_blank" class="contact-link" style="display: inline;">Dr. Ayan Mukhopadhyay</a>.
+            I hold an M.S. in Electrical and Computer Engineering from Vanderbilt University and a B.S. in
+            Electrical Engineering from the University of Illinois Urbana-Champaign.
+          </p>
+          <p>
+            My research focuses on <strong>decision making under uncertainty</strong> — building AI systems that
+            reason robustly and transparently in complex, real-world environments. I'm also interested in
+            explainable AI and have prior research experience in biomedical imaging and remote sensing.
+          </p>
+        </section>
+
+
+        <!--  Research Areas  -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Research Areas</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="ML icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Decision Making Under Uncertainty</h4>
+                <p class="service-item-text">
+                  Building robust AI systems that reason and plan under uncertainty, including explainability frameworks for Monte Carlo Tree Search.
                 </p>
-            </div>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Biomedical icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Biomedical Imaging</h4>
+                <p class="service-item-text">
+                  Nuclei segmentation and AI foundation model evaluation in kidney pathology at Vanderbilt University Medical Center.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="Remote sensing icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Remote Sensing</h4>
+                <p class="service-item-text">
+                  Survey and evaluation of 59 vision foundation models for remote sensing; active learning for agriculture segmentation.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="ML icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Explainable AI</h4>
+                <p class="service-item-text">
+                  Developing interpretable and transparent AI systems, including LLM-based pipelines for generating evidence-grounded explanations.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
         </section>
 
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                
-                <!-- smart mug -->
-                <div class="project">
-                    <h3><a href="https://github.com/haniaa2/SmartMugs.git" class="project-link">Smart Mug Design</a></h3>
-                    <p><strong>- Date:</strong> Jan 2023 – May 2023</p>
-                    <p><strong>- Description:</strong> Designed a smart mug with precise temperature control. Created and simulated circuits, soldered components onto a PCB, and programmed a microcontroller using Arduino. The result was a user-friendly, market-ready product.</p>
-                </div>
+      </article>
 
-                <!-- virtual zoo -->
-                <div class="project">
-                    <h3><a href="https://github.com/siqi234/CS839508-AR-Project/tree/8f47a858d73fdf0ea820119857be908b1343fa2b/project4" class="project-link">Virtual Zoo AR Experience</a></h3>
-                    <p><strong>- Date:</strong> Mar 2024 – May 2024</p>
-                    <p><strong>- Description:</strong> Built an educational AR app using Unity and Vuforia. The app brings a virtual zoo to life with animations, sound simulations, and interactive features for Android devices.</p>
-                </div>
 
-                <!-- RSFM review -->
-                <div class="project">
-                    <h3><a href="https://arxiv.org/abs/2408.03464" class="project-link">Foundation Models for Remote Sensing</a></h3>
-                    <p><strong>- Date:</strong> Apr 2024 – Present</p>
-                    <p><strong>- Description:</strong> Conducted a review of 59 foundation models in remote sensing, categorized them, and evaluated their performance. Contributed to a paper for IEEE journals on advancements and trends in the field. (Under review by IEEE Geoscience and Remote Sensing Magzine)</p>
-                
-                    <h4>Accepted Papers:</h4>
-                    <ul>
-                        <li><a href="https://arxiv.org/abs/2408.03464" class="project-link">IEEE Geoscience and Remote Sensing Magzine: Vision Foundation Models in Remote Sensing: A Survey</a></li>
-                    </ul>
-                </div>
+      <!--  RESUME  -->
 
-                <!-- Kidney pathology -->
-                <div class="project">
-                    <h3><a href="" class="project-link">Nuclei Segmentation in Kidney Pathology</a></h3>
-                    <p><strong>- Date:</strong> Feb 2024 – Present</p>
-                    <p><strong>- Description:</strong> Worked on nuclei segmentation for kidney pathology at Vanderbilt University Medical Center. Improved model accuracy through image annotation and prediction analysis.</p>
-                    <h4>Submitted Papers:</h4>
-                    <ul>
-                        <li><a href="https://arxiv.org/abs/2408.06381" class="project-link">SPIE 2025: Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology</a></li>
-                        <li><a href="https://arxiv.org/abs/2411.00078" class="project-link">Nature Communications Medicine: How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment</a></li>
-                    </ul>
-                </div>
-            
+      <article class="resume" data-page="resume">
 
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">The College of William & Mary</h4>
+              <span>Aug 2025 — Present</span>
+              <p class="timeline-text" style="font-style: italic; margin-bottom: 6px;">School of Computing, Data Science & Physics</p>
+              <ul class="timeline-text" style="list-style: disc; padding-left: 18px; margin: 0;">
+                <li>Ph.D. student in Computer Science</li>
+                <li>Advisor: <a href="https://www.ayanmukhopadhyay.com/" target="_blank" class="contact-link" style="display: inline;">Dr. Ayan Mukhopadhyay</a></li>
+                <li>Robust and Adaptive Intelligence Laboratory (RAIL)</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Vanderbilt University</h4>
+              <span>Aug 2023 — May 2025</span>
+              <p class="timeline-text" style="font-style: italic; margin-bottom: 6px;">School of Engineering</p>
+              <ul class="timeline-text" style="list-style: disc; padding-left: 18px; margin: 0;">
+                <li>Master of Science in Electrical and Computer Engineering, certified May 2025</li>
+                <li>Awarded Engineering Graduate Fellowship</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">University of Illinois, Urbana-Champaign</h4>
+              <span>Aug 2021 — Jun 2023</span>
+              <p class="timeline-text" style="font-style: italic; margin-bottom: 6px;">Grainger College of Engineering</p>
+              <ul class="timeline-text" style="list-style: disc; padding-left: 18px; margin: 0;">
+                <li>Bachelor of Science in Electrical Engineering, certified June 2023</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Clarkson University</h4>
+              <span>Aug 2019 — May 2021</span>
+              <p class="timeline-text" style="font-style: italic; margin-bottom: 6px;">Coulter School of Engineering</p>
+              <ul class="timeline-text" style="list-style: disc; padding-left: 18px; margin: 0;">
+                <li>Major in Electrical Engineering</li>
+                <li>Dean's List for Fall 2019, Spring 2021</li>
+                <li>Presidential Scholar for Spring 2020</li>
+              </ul>
+            </li>
+
+          </ol>
+
         </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
-                <ul>
-                    <li>Email: siqi.lu@vanderbilt.edu</li>
-                    <li>Phone: +1 315-267-6967</li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/siqi-lu-097522293/" class="contact-link">linkedin.com/in/siqi-lu-097522293</a></li>
-                    <li>GitHub: <a href="https://github.com/siqi234" class="contact-link">github.com/siqi234</a></li>
-                    <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=LXjWy8kAAAAJ" class="contact-link">my publications</a></li>
-                </ul>
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
+            <h3 class="h3">Research Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Graduate Research Assistant — RAIL, William & Mary</h4>
+              <span>Jan 2025 — Present</span>
+              <p class="timeline-text">
+                Working on decision making under uncertainty with
+                <a href="https://www.ayanmukhopadhyay.com/" target="_blank" class="contact-link" style="display: inline;">Dr. Ayan Mukhopadhyay</a>.
+                Developing a user-centered explainability framework for Monte Carlo Tree Search (MCTS) using an
+                LLM-based pipeline to generate evidence-grounded natural-language explanations.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Research Assistant — HRLB, Vanderbilt University</h4>
+              <span>Aug 2023 — May 2025</span>
+              <p class="timeline-text">
+                Nuclei segmentation in kidney pathology (collaboration with VUMC). Collected WSIs, implemented
+                segmentation models, curated 400 hard patches, and annotated 200 testing images using QuPath and SAM.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Research Assistant — SARL, Vanderbilt University</h4>
+              <span>Aug 2023 — May 2025</span>
+              <p class="timeline-text">
+                Literature review of 59 foundation models in remote sensing (Jun 2021 – Jun 2024). Also applied
+                active learning with UNet, SegNet, and DeepLabv3 for agriculture segmentation using Raster Vision and QGIS.
+              </p>
+            </li>
+
+          </ol>
+
         </section>
 
-        <section id="photo-gallery">
-            <div class="container">
-                <h2>Photo Gallery</h2>
-                <div class="gallery1">
-                    <img src="img/picture1.jpg">
-                    <img src="img/picture2.jpg">
-                    <img src="img/picture3.png">
-                    <img src="img/picture4.png">
-                    <img src="img/IMG_6037.png">
-                    <img src="img/IMG_7317.png">
-                    <!-- <img src="img/IMG_0322.png"> -->
-                </div>
-                <div class="gallery2">
-                    <img src="img/IMG_6477.png">
-                    <img src="img/IMG_0355.png">
-                    
-                    <!-- <img src="img/life2.jpg" alt="Siqi with friends">
-                    <img src="img/life3.jpg" alt="Siqi at a workshop">
-                    <img src="img/life4.jpg" alt="Siqi enjoying nature">
-                    <img src="img/life5.jpg" alt="Siqi at a hackathon"> -->
-                </div>
-            </div>
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My Skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python / PyTorch / TensorFlow</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Deep Learning & Computer Vision</h5>
+                <data value="88">88%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 88%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">MATLAB & Simulink</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">C/C++ / Java / JavaScript / Lua</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+          </ul>
+
         </section>
 
-    </main>
+      </article>
 
-   
+
+      <!--  PORTFOLIO  -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Research</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Hardware</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>AR/XR</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Research</button></li>
+              <li class="select-item"><button data-select-item>Hardware</button></li>
+              <li class="select-item"><button data-select-item>AR/XR</button></li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="research">
+              <a href="https://arxiv.org/abs/2605.16524" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="MCTS Explainability" loading="lazy">
+                </figure>
+                <h3 class="project-title">Template-Free Explainability for MCTS</h3>
+                <p class="project-category">Research</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="research">
+              <a href="https://arxiv.org/abs/2408.03464" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.jpg" alt="Remote Sensing Foundation Models" loading="lazy">
+                </figure>
+                <h3 class="project-title">Foundation Models for Remote Sensing</h3>
+                <p class="project-category">Research</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="research">
+              <a href="https://arxiv.org/abs/2408.06381" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.png" alt="Kidney Pathology Nuclei Segmentation" loading="lazy">
+                </figure>
+                <h3 class="project-title">Nuclei Segmentation in Kidney Pathology</h3>
+                <p class="project-category">Research</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="hardware">
+              <a href="https://github.com/haniaa2/SmartMugs.git" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-3.jpg" alt="Smart Mug Design" loading="lazy">
+                </figure>
+                <h3 class="project-title">Smart Mug Design</h3>
+                <p class="project-category">Hardware</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ar/xr">
+              <a href="https://github.com/siqi234/CS839508-AR-Project/tree/8f47a858d73fdf0ea820119857be908b1343fa2b/project4" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-4.png" alt="Virtual Zoo AR" loading="lazy">
+                </figure>
+                <h3 class="project-title">Virtual Zoo AR Experience</h3>
+                <p class="project-category">AR/XR</p>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--  PUBLICATIONS (replaces Blog)  -->
+
+      <article class="blog" data-page="publications">
+
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://arxiv.org/abs/2408.03464" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="IEEE GRSM Remote Sensing Survey" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">IEEE GRSM</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Vision Foundation Models in Remote Sensing: A Survey</h3>
+                  <p class="blog-text">
+                    A comprehensive review of 59 vision foundation models in remote sensing, with categorization
+                    and performance evaluation. Under review by IEEE Geoscience and Remote Sensing Magazine.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://arxiv.org/abs/2408.06381" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="SPIE 2025 Kidney Pathology" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">SPIE 2025</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology</h3>
+                  <p class="blog-text">
+                    Evaluation of cell AI foundation models for nuclei segmentation tasks in kidney pathology images.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://arxiv.org/abs/2411.00078" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Nature Communications Medicine" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Nature Comm. Medicine</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-11">Nov 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment</h3>
+                  <p class="blog-text">
+                    A rigorous human-in-the-loop evaluation of cell AI foundation models for kidney pathology applications.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://arxiv.org/abs/2605.16524" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="IJCAI XAI Workshop 2026" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">IJCAI Workshop — Under Review</p>
+                    <span class="dot"></span>
+                    <time datetime="2026">2026</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Toward Template-Free Explainability for Monte Carlo Tree Search</h3>
+                  <p class="blog-text">
+                    A user-centered explainability framework for MCTS using an LLM-based pipeline to generate
+                    evidence-grounded natural-language explanations. Under review at IJCAI Workshop on Explainable AI, 2026.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--  CONTACT  -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50532.53!2d-76.7074!3d37.2707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b08770df099bf1%3A0x4a3d13f6b6a3e7a0!2sWilliamsburg%2C%20VA%2C%20USA!5e0!3m2!1sen!2sus!4v1700000000001"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Get In Touch</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer style="text-align: center; padding: 16px; font-size: 12px; color: #888;">
+    Design template by <a href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" style="color: #888; text-decoration: underline;">codewithsadee</a> — MIT License
+  </footer>
+
+  <!-- Hidden stubs required by script.js (testimonials/modal references) -->
+  <div data-modal-container style="display:none">
+    <div data-overlay></div>
+    <section class="testimonials-modal">
+      <button data-modal-close-btn></button>
+      <div class="modal-img-wrapper">
+        <figure class="modal-avatar-box"><img data-modal-img src="" alt=""></figure>
+      </div>
+      <div class="modal-content">
+        <h4 data-modal-title></h4>
+        <div data-modal-text></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
